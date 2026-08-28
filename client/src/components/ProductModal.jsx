@@ -29,7 +29,17 @@ export default function ProductModal({
 
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()} style={{ maxWidth: '680px', padding: 0, overflow: 'hidden' }}>
+      <div 
+        className="modal-content" 
+        onClick={(e) => e.stopPropagation()} 
+        style={{ 
+          maxWidth: '680px', 
+          padding: 0, 
+          overflowY: 'auto', 
+          maxHeight: '90vh',
+          WebkitOverflowScrolling: 'touch'
+        }}
+      >
         <button className="close-btn" onClick={onClose} style={{ top: '12px', right: '12px', zIndex: 10 }}>
           <X size={18} />
         </button>
@@ -76,7 +86,7 @@ export default function ProductModal({
           </div>
 
           {/* Right: Product Details & Call/Order Buttons */}
-          <div style={{ padding: '24px', display: 'flex', flexDirection: 'column', gap: '14px' }}>
+          <div style={{ padding: '24px 24px 28px 24px', display: 'flex', flexDirection: 'column', gap: '14px' }}>
             <div>
               <div className="product-category">{product.category}</div>
               <h2 style={{ fontSize: '1.35rem', fontWeight: 800, marginTop: '4px', lineHeight: 1.3 }}>
