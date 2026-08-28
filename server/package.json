@@ -1,0 +1,16 @@
+{
+  "name": "mashi-gebeya-server",
+  "version": "1.0.0",
+  "description": "Full-Stack E-Commerce & Telegram Bot API for Mashi Gebeya",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.2"
+  }
+}
