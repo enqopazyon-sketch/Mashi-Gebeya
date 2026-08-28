@@ -332,12 +332,25 @@ footer.app-footer p, footer.app-footer span {
   align-items: center;
   gap: 8px;
   overflow-x: auto;
-  padding: 6px 0 16px 0;
-  scrollbar-width: none;
+  white-space: nowrap;
+  padding: 8px 4px 16px 4px;
+  scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-gold) transparent;
+}
+.category-container::-webkit-scrollbar {
+  height: 4px;
+}
+.category-container::-webkit-scrollbar-thumb {
+  background: var(--accent-gold);
+  border-radius: 4px;
 }
 .category-chip {
-  display: flex;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  display: inline-flex;
   align-items: center;
   gap: 6px;
   padding: 8px 14px;
@@ -351,6 +364,7 @@ footer.app-footer p, footer.app-footer span {
   cursor: pointer;
   transition: var(--transition);
   touch-action: manipulation;
+  user-select: none;
 }
 .category-chip:hover, .category-chip:active {
   border-color: var(--accent-gold);
